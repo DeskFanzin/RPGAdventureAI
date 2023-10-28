@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3cfba;
+  color: #f3cfba;
+}
+
+.blackbox {
+  background-color: rgb(255, 0, 0, 0.5);
+  border-radius: 10%;
+  padding: 2rem;
+  max-width: 550px;
+  text-align: center;
+}
+
+.blackbox h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.logotipo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 40px;
+}
+
+.ending_image img{
+  width: 150px;
+  height: 150px;
+  border: solid 1.5px red;
+}
+
+.logotipo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: solid 1.5px red;
+}
+
+.blackbox div {
+  margin-bottom: 1rem;
+}
+
+.blackbox a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: ease-in-out 0.2s;
+}
+
+.blackbox a:hover {
+  background-color: #ff6666;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Over</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/game_over.css') }}" />
+</head>
+<body>
+    <img id="background_image" src=" {{ background_image }}" alt="">
+    <style>
+        #background_image{
+          z-index: -10;
+          position: absolute;
+          max-height: 100%;
+          width: 1024px;
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+    
+    <div class="ending_image">
+        <img src="{{ ending_image }}" alt="">
+    </div>
+    <div class="blackbox">
+        <h1>Game Over</h1>
+        <div>
+            <p>{{ result }}</p>
+        </div>
+        <a href="/">Reiniciar</a>
+    </div>
+</body>
+</html>

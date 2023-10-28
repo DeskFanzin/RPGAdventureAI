@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/battle.css') }}" />
+</head>
+<body>
+    <img id="background_image" src="{{ background_image }}" alt="">
+    <style>
+        #background_image {
+            z-index: -10;
+            position: absolute;
+            max-height: 100%;
+            width: 1024px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <div class="logotipo">
+        <img src="../static/logotipo_rpg.jpg" alt="">
+    </div>
+    <div class="characters">
+        <div class="character">
+            <img src="{{ character_image }}" alt="">
+        </div>
+        <div class="boss">
+            <img src="{{ boss_image }}" alt="">
+        </div>
+    </div>
+    
+    <div class="blackbox">
+        <h1>Batalha</h1>
+        <div>
+            <p>Personagem:</p>
+            <progress id="userLifeProgress" value="{{ user_life }}" max="10"></progress>
+            <span id="userLife">{{ user_life }}/10</span>
+        </div>
+        <div>
+            <p>Chefe:</p>
+            <progress id="bossLifeProgress" value="{{ boss_life }}" max="20"></progress>
+            <span id="bossLife">{{ boss_life }}/20</span>
+        </div>
+
+        <div>
+            <p>Seu ataque:</p>
+            <span>{{ user }}</span>
+            <span></span>
+            <p>Ataque do boss:</p>
+            <span>{{ boss }}</span>
+        </div>
+
+        <form method="POST" action="/battle">
+            <button type="submit" name="attack" value="attack">Atacar</button>
+        </form>
+        <form method="POST" action="/battle">
+            <button type="submit" name="attack" value="defend">Defender</button>
+    </div>
+</body>
+</html>

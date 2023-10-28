@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/result.css') }}" />
+</head>
+<body>
+    <img id="background_image" src=" {{ background_image }}" alt="">
+    <style>
+        #background_image{
+          z-index: -10;
+          position: absolute;
+          max-height: 100%;
+          width: 1024px;
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+    <div class="logotipo">
+        <img src="../static/logotipo_rpg.jpg" alt="">
+    </div>
+    <div class="blackbox">
+    <h1>Escolha entre as opções!</h1>
+    <form method="POST" action="/result">
+        <button type="submit" name="choice" value="1"> 1 </button>
+        <button type="submit" name="choice" value="2"> 2 </button>
+    </form>
+    {% if result %}
+    <div class="result">{{ result }}</div>
+    {% endif %}
+
+    <div class="after-history">
+        <div class="imagePerson">
+            <img src="{{ character_image }}" alt="">
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

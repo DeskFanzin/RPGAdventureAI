@@ -1,0 +1,19 @@
+<!-- FILEPATH: /home/gabriel/codes/pythonchat-main/RPGAdventure/app/templates/adventuretheme.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Theme</title>
+</head>
+<body>
+    <h1>Adventure Theme</h1>
+    <form method="POST">
+        <label for="text-input">Enter text:</label>
+        <input type="text" id="text-input" name="adventuretheme_text">
+        <button type="submit">Submit</button>
+    </form>
+    {% if result %}
+        <img src="{{ result }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
